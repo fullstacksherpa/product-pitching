@@ -1,7 +1,11 @@
 import React from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CourseList from "./components/CourseList"
+
+
+import Feedbacks from "./components/Feedbacks"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
 import PDFViewer from "./components/PDFViewer"
-import Home from "./components/Home";
 
 
 
@@ -9,12 +13,14 @@ import Home from "./components/Home";
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <Home />}/>
-        <Route path="exam" element={<PDFViewer />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+    
+      <Navbar />
+      <CourseList />
+      <PDFViewer />
+      <Feedbacks/>
+      <Footer />
+    </>
   )
 }
 
